@@ -21,7 +21,7 @@ Post.has_new_additions? # => false
 @post.new? # => false
 
 Installation
-=======
+============
 
 script/plugin install git://github.com/balvig/acts_as_newsworthy.git
 

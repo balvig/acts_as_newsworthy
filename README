@@ -11,14 +11,14 @@ class Post < ActiveRecord::Base
 end
 
 @post = Post.create(:published_at => Date.today)
-Post.has_new_additions? # => true
 @post.new? # => true
+Post.has_new_additions? # => true
 
 ---
 
 @post = Post.create(:published_at => 4.days.ago)
-Post.has_new_additions? # => false
 @post.new? # => false
+Post.has_new_additions? # => false
 
 Installation
 ============

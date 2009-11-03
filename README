@@ -7,7 +7,7 @@ Example
 =======
 
 class Post < ActiveRecord::Base
-  acts_as_newsworthy :days => 3, :field => :published_at #defaults are :days => 14, :fields => :created_at
+  acts_as_newsworthy :days => 3, :field => :published_at #defaults are :days => 14, :field => :created_at
 end
 
 @post = Post.create(:published_at => Date.today)

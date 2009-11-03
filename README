@@ -1,0 +1,24 @@
+ActsAsNewsworthy
+================
+
+Adds convenience methods "has_new_additions?" and "new?" for f.ex. adding a "new" icon on index pages next to new posts.
+
+Example
+=======
+
+class Post < ActiveRecord::Base
+  acts_as_newsworthy :days => 3, :field => :published_at #defaults are :days => 14, :fields => :created_at
+end
+
+@post = Post.create(:published_at => Date.today)
+Post.has_new_additions? # => true
+@post.new? # => true
+
+---
+
+@post = Post.create(:published_at => 4.days.ago)
+Post.has_new_additions? # => false
+@post.new? # => false
+
+
+Copyright (c) 2009 Jens Jakob Balvig, released under the MIT license

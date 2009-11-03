@@ -20,5 +20,9 @@ Post.has_new_additions? # => true
 Post.has_new_additions? # => false
 @post.new? # => false
 
+Installation
+=======
+
+script/plugin install git://github.com/balvig/acts_as_newsworthy.git
 
 Copyright (c) 2009 Jens Jakob Balvig, released under the MIT license

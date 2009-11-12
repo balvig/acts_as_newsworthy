@@ -11,7 +11,7 @@ module ActsAsNewsworthy
       
       instance_eval <<-DEFINE_METHODS
         def has_new_additions?
-          !!self.first(:conditions => {:#{field} => #{range}.days.ago.to_date..Date.today})
+          !!self.first(:conditions => ['#{field} > ?', #{range}.days.ago.to_date])
         end
       DEFINE_METHODS
       
